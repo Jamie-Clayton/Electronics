@@ -51,7 +51,7 @@ All software languages involve a syntax that you need to learn. Software does wh
 3. Run the code file
 4. Confirm the behaviour of the code
 
-### VariableS
+### Variables
 
 Jump into Visual Studio Code and run some python code to understand variables and how they may be used in a software program.
 
