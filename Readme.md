@@ -2,15 +2,19 @@
 
 The [Centenary Mens Shed](http://www.csms.org.au/) electronics interest group resources.
 
-## References
+## References - Raspberry Pi
 
 [Raspberry Pi Foundation](https://www.raspberrypi.org/)
 
-[Raspberry Pi 4B](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/)
+[Raspberry Pi Device: 4B](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/)
 
-[Raspberry Pi Zero - Small form factor](https://www.raspberrypi.org/products/raspberry-pi-zero-w/)
+[Raspberry Pi Device: Zero (Small form factor)](https://www.raspberrypi.org/products/raspberry-pi-zero-w/)
 
-[Commercialization](https://www.hallsteninnovations.com/raspberry-pi-to-production/)
+[Commercialization considerations](https://www.hallsteninnovations.com/raspberry-pi-to-production/)
+
+## Kit Suppliers
+
+The following links are not endorsements, just a starting guide.
 
 [Kits - Adeept](https://www.adeept.com/)
 
@@ -18,20 +22,26 @@ The [Centenary Mens Shed](http://www.csms.org.au/) electronics interest group re
 
 [Kits - Kumantech](http://www.kumantech.com/)
 
-[Mains - Relay Switch](https://www.youtube.com/watch?v=bOGltcgiXiU)
+## Electronic Suppliers (Australia)
 
-[Australia - RS Online](https://au.rs-online.com/)
+[RS Online](https://au.rs-online.com/)
 
-[Australia - Element 14](https://au.element14.com/)
+[Element 14](https://au.element14.com/)
 
-[Australia - Pi](https://raspberry.piaustralia.com.au/)
+[Pi Australia](https://raspberry.piaustralia.com.au/)
 
-[Australia - Core Electronic](https://core-electronics.com.au/)
+[Core Electronics](https://core-electronics.com.au/)
 
-[Australia - Little Bird](https://www.littlebird.com.au/)
+[Little Bird](https://www.littlebird.com.au/)
+
+## Other links
 
 [Energy Monitoring](https://learn.openenergymonitor.org/)
 
 [Sensor - Standoff, Risers - Plastic](https://au.banggood.com/180-PCS-M2-Nylon-Plastic-Screw-Screw-nutsInsulated-Column-Pillar-Set-For-FPV-RC-Drone-p-1314659.html?gmcCountry=AU&currency=AUD)
 
 [HAT - Standoff Spacers - Brass](https://au.banggood.com/270Pcs-M2-SingleDouble-pass-Copper-Pillar-Round-Screw-Brass-Standoff-Spacer-Isolation-Column-p-1385646.html?gmcCountry=AU&currency=AUD)
+
+## Learning
+
+[Mains - Relay Switch](https://www.youtube.com/watch?v=bOGltcgiXiU)
