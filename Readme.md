@@ -2,6 +2,16 @@
 
 The [Centenary Mens Shed](http://www.csms.org.au/) electronics interest group resources.
 
+| Topic                  | Description              |
+|------------------------|--------------------------|
+| [Variables](Lesson1-Variables/readme.md) | Introduction to raspberry pi and python software programing |
+| [Counting](Lesson2-Counting/readme.md) | Counting in python |
+
+## Electronic Images
+
+![Resistors](assets/ResistorColourCodes.png)
+![Symbols](assets/ElectronicSymbol.png)
+
 ## References - Raspberry Pi
 
 [Raspberry Pi Foundation](https://www.raspberrypi.org/)

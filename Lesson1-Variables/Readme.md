@@ -13,6 +13,8 @@
 * Includes an operating system - Linux (but you can run windows 10 on newer hardware)
 * Interesting sensors are available for 'robotics'
 
+![kits](https://www.adeept.com/u_file/1706/products/30/549d118c7d.jpg.500x500.jpg)
+
 ## Some interesting project ideas
 
 * Weather station
@@ -57,6 +59,12 @@ Jump into Visual Studio Code and run some python code to understand variables an
 
 * [Introduction to variables](./variables.py)
 * [Introduction to time](./time.py)
+
+### Running software on Raspberry Pi
+
+![Red LED](https://www.adeept.com/u_file/1804/products/14/72f3eb6e4a.jpg.500x500.jpg)
+![Colour LED](https://www.adeept.com/u_file/1706/products/30/8377f3725e.jpg.500x500.jpg)
+
 * Run the LED 01, LED 02, LED 03 python examples that have been downloaded from the [Adeept code repository](https://github.com/adeept/Adeept_Ultimate_Starter_Kit_Python_Code_for_RPi).
 
 ## Resources
