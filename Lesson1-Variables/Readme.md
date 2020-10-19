@@ -88,3 +88,5 @@ Jump into Visual Studio Code and run some python code to understand variables an
 [Project - Magic Mirror Video](https://www.youtube.com/watch?v=WQR0fv9C5dU)
 
 [Project - Nerf Gun](https://www.youtube.com/watch?v=ClWYLkUniJc)
+
+[LED Overview](https://youtu.be/CmnrC3BLnCs)
