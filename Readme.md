@@ -48,9 +48,13 @@ The following links are not endorsements, just a starting guide.
 
 [Energy Monitoring](https://learn.openenergymonitor.org/)
 
+[Current Sensor](https://core-electronics.com.au/non-invasive-ac-current-sensor-20a-max-seeed-studio.html)
+
 [Sensor - Standoff, Risers - Plastic](https://au.banggood.com/180-PCS-M2-Nylon-Plastic-Screw-Screw-nutsInsulated-Column-Pillar-Set-For-FPV-RC-Drone-p-1314659.html?gmcCountry=AU&currency=AUD)
 
 [HAT - Standoff Spacers - Brass](https://au.banggood.com/270Pcs-M2-SingleDouble-pass-Copper-Pillar-Round-Screw-Brass-Standoff-Spacer-Isolation-Column-p-1385646.html?gmcCountry=AU&currency=AUD)
+
+[iBeacon - Apple](https://www.theregister.com/2013/11/29/feature_diy_apple_ibeacons/) or [Android Beacon](https://circuitdigest.com/microcontroller-projects/turn-your-raspberry-pi-into-bluetooth-beacon-using-eddystone-ble-beacon) or [Pi Beacon](https://pimylifeup.com/raspberry-pi-ibeacon/)
 
 ## Learning
 
