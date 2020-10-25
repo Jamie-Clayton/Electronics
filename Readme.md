@@ -2,7 +2,12 @@
 
 The [Centenary Mens Shed](http://www.csms.org.au/) electronics interest group resources.
 
-| Topic                  | Description              |
+| Theory Topic                  | Description              |
+|------------------------|--------------------------|
+| [Introduction](Week%201%20Introduction.pdf) | Introduction to Electronics |
+| [Basic Components](Week%202%20Basic%20Components.pdf) | Resistors, Capacitors and Inductors |
+
+| Software Topic                  | Description              |
 |------------------------|--------------------------|
 | [Variables](Lesson1-Variables/Readme.md) | Introduction to raspberry pi and python software programing |
 | [Counting](Lesson2-Counting/Readme.md) | Counting in python |
