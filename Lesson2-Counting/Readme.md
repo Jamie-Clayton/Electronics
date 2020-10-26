@@ -79,3 +79,6 @@ Considering what your going to do, when you want to
 
 [Learn loops](https://www.learnpython.org/en/Loops)
 
+[Lesson 26]()
+
+[Lesson 36]()
