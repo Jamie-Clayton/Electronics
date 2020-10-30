@@ -10,7 +10,11 @@
 
 ## Counting
 
-Here is a simple counting example, where we change variables up or down be another number. The while loop allows us to keep doing a change until the drink temperature is greater than 10 degrees C. 
+https://docs.python.org/3/tutorial/controlflow.html
+
+Here is a simple counting example, where we change variables up or down be another number. The while loop allows us to keep doing a change until the drink temperature is greater than 10 degrees.
+
+### While loops
 
     drinkTemp = 40
     chillByC = 8
@@ -25,6 +29,9 @@ Here is a simple counting example, where we change variables up or down be anoth
         coolingAttempt = coolingAttempt + 1
 
     print(f"Drink drink @ {drinkTemp}C after {coolingAttempt} chilling attempts")
+
+### For loops
+
 
 ## Storing information
 
