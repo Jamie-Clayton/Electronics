@@ -3,7 +3,6 @@
 - Recap Raspberry PI
 - Recap variables
 - Counting
-- Storing data
 - Introduction to sensors
 - Introduction to displays
 - Printing or CNC cases or mounts
@@ -55,6 +54,13 @@ Here is a simple counting example, where we change variables up or down be anoth
 - OMG more binary code settings
 - Stopping the program & display considerations
 
+
+## Next - Storing information
+
+- Sensors will write output to files in the operating system
+- You software programs will need to read those files
+- Eventually you may want to store data, so you can recover it if your program stops or the power goes off. E.g. Weather data.
+
 ## From Prototype to Production
 
 Considering what your going to do, when you want to 
@@ -68,3 +74,8 @@ Considering what your going to do, when you want to
 ## References
 
 [Thingieverse - 3D printing ](https://www.thingiverse.com/)
+
+[Python Documentation - Loops](https://docs.python.org/3/tutorial/controlflow.html)
+
+[Learn loops](https://www.learnpython.org/en/Loops)
+
