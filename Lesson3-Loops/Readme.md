@@ -29,8 +29,16 @@
 
 ## GPIO Reference Commands
 
+```bash
+# Open Terminal
+# Display your raspberry pi pin details
+pinout
+
+```
+
 ```python
 
+# Open Python editor
 import RPi.GPIO as GPIO
 
 # Use Broadcom pin numbers (GPIO 14, GPIO 15 etc)
