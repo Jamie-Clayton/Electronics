@@ -51,7 +51,7 @@ All software languages involve a syntax that you need to learn. Software does wh
 1. You write text instructions
 2. Compile those instructions to confirm they are correct
 3. Run the code file
-4. Confirm the behaviour of the code
+4. Confirm the behavior of the code
 
 ### Variables
 
@@ -69,7 +69,7 @@ Jump into Visual Studio Code and run some python code to understand variables an
 
 ## Resources
 
-[Raspberry PI](https://www.raspberrypi.org/)
+[Raspberry PI Organization](https://www.raspberrypi.org/)
 
 [Raspberry PI Magazine](https://magpi.raspberrypi.org/)
 

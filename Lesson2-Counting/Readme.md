@@ -15,6 +15,7 @@ Here is a simple counting example, where we change variables up or down be anoth
 
 ### While loops
 
+```python
     drinkTemp = 40
     chillByC = 8
     coolingAttempt = 0
@@ -28,9 +29,7 @@ Here is a simple counting example, where we change variables up or down be anoth
         coolingAttempt = coolingAttempt + 1
 
     print(f"Drink drink @ {drinkTemp}C after {coolingAttempt} chilling attempts")
-
-### For loops
-
+```
 
 ## Storing information
 
@@ -39,7 +38,7 @@ Here is a simple counting example, where we change variables up or down be anoth
 - Eventually you may want to store data, so you can recover it if your program stops or the power goes off. E.g. Weather data.
 
 ## Sensors
- 
+
 ![Temperature](https://www.adeept.com/u_file/1706/products/30/0a78aa60da.jpg)
 
 - RTFM! You have to configure your devices to receive data from sensors
@@ -53,7 +52,6 @@ Here is a simple counting example, where we change variables up or down be anoth
 
 - OMG more binary code settings
 - Stopping the program & display considerations
-
 
 ## Next - Storing information
 
@@ -78,7 +76,3 @@ Considering what your going to do, when you want to
 [Python Documentation - Loops](https://docs.python.org/3/tutorial/controlflow.html)
 
 [Learn loops](https://www.learnpython.org/en/Loops)
-
-[Lesson 26]()
-
-[Lesson 36]()
