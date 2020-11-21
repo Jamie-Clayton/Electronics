@@ -6,14 +6,26 @@ The [Centenary Mens Shed](http://www.csms.org.au/) electronics interest group re
 |------------------------|--------------------------|
 | [Introduction](Week%201%20Introduction.pdf) | Introduction to Electronics |
 | [Basic Components](Week%202%20Basic%20Components.pdf) | Resistors, Capacitors and Inductors |
+| [Capacitance](Cap-meter_Code.zip) | Capacitors Raspberry PI Code |
+| [Capacitance Splice](Capacitance-meter-SPICE.zip) | Capacitors Diagram |
 
 | Software Topic                  | Description              |
 |------------------------|--------------------------|
 | [Variables](Lesson1-Variables/Readme.md) | Introduction to raspberry pi and python software programing |
 | [Counting](Lesson2-Counting/Readme.md) | Counting in python |
+| [Loops](Lesson3-Loops/Readme.md) | Loop in python |
+
+## Projects
+
+![Weather Station](assets/WeatherStation.svg)
+
+[Weather Station Project Documentation](Weather-Station-Project.md)
 
 ## Electronic Images
 
+![Raspberry PI 3](assets/Raspberry_Pi_3_Model_B.png)
+![Raspberry PI 3](assets/Raspberry_Pi_4_Model_B.jpg)
+![Raspberry PI GPIO Layout](assets/raspberry_pi_Raspberry-Pi-GPIO-Layout-Model-B-Plus.png)
 ![Resistors](assets/ResistorColourCodes.png)
 ![Symbols](assets/ElectronicSymbol.png)
 
