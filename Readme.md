@@ -21,6 +21,8 @@ The [Centenary Mens Shed](http://www.csms.org.au/) electronics interest group re
 
 [Weather Station Project Documentation](Weather-Station-Project.md)
 
+[Water Tank Level](https://core-electronics.com.au/projects/lora-wan-tank-level-sensor-node)
+
 ## Electronic Images
 
 ![Raspberry PI 3](assets/Raspberry_Pi_3_Model_B.png)
