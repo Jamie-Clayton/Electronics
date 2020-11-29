@@ -14,6 +14,7 @@ The [Centenary Mens Shed](http://www.csms.org.au/) electronics interest group re
 | [Variables](Lesson1-Variables/Readme.md) | Introduction to raspberry pi and python software programing |
 | [Counting](Lesson2-Counting/Readme.md) | Counting in python |
 | [Loops](Lesson3-Loops/Readme.md) | Loop in python |
+| [Functions](Lesson4-Functions/Readme.md) | Modular programming in python |
 
 ## Projects
 
