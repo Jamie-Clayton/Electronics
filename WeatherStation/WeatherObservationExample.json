@@ -1,0 +1,33 @@
+{
+    "observations": [
+        {
+            "stationID": "IBRISB2152",
+            "obsTimeUtc": "2021-04-24T19:39:54Z",
+            "obsTimeLocal": "2021-04-25T05:39:54",
+            "neighborhood": "Jindalee",
+            "softwareType": "Python Script 1.0",
+            "country": "AU",
+            "solarRadiation": null,
+            "lon": 152.933376,
+            "realtimeFrequency": 3,
+            "epoch": 1619293194,
+            "lat": -27.53513,
+            "uv": null,
+            "winddir": null,
+            "humidity": null,
+            "qcStatus": 1,
+            "metric": {
+                "temp": 14,
+                "heatIndex": null,
+                "dewpt": null,
+                "windChill": null,
+                "windSpeed": null,
+                "windGust": null,
+                "pressure": null,
+                "precipRate": null,
+                "precipTotal": null,
+                "elev": 20
+            }
+        }    
+    ]
+}
