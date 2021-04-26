@@ -13,6 +13,7 @@ import json
 # Retrieve from https://www.wunderground.com/dashboard/pws
 StationID = ''
 StationApiKey = ''
+WebServiceApiKey = ''
 
 # Fixed location details.
 StationCountryCode = 'AU'
@@ -29,8 +30,10 @@ class Object:
 
 WeatherURL = f'https://api.weather.com/v2/pws/observations/current?stationId={StationID}&format=json&units={StationUnits}&apiKey={StationApiKey}'
 
-headers = {'user-agent': 'RaspberryPiPython/0.0.1',
-            'Accept-Encoding': 'gzip'}
+headers = Object()
+headers.user-agent = 'RaspberryPiPython/0.0.1'
+headers.Accept-Encoding = 'gzip'
+headers.key = WebServiceApiKey
 
 data = Object()
 data.observations = Object()
@@ -59,7 +62,7 @@ data.observations.temp = 24
 print(data.toJSON())
 
 # Publish your weather station observations to the weather underground.
-response = requests.post(WeatherURL, headers=headers, json=data.toJSON())
+response = requests.post(WeatherURL, headers=headers.toJSON(), json=data.toJSON())
 
 if response.status_code != 200:
     print(f'POST {WeatherURL} {response.status_code}')  
