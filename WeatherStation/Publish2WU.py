@@ -28,12 +28,9 @@ class Object:
     def toJSON(self):
         return json.dumps(self,default=lambda o: o.__dict__, sort_keys=True, indent=4)
 
-WeatherURL = f'https://api.weather.com/v2/pws/observations/current?stationId={StationID}&format=json&units={StationUnits}&apiKey={StationApiKey}'
+WeatherURL = f'https://api.weather.com/v2/pws/observations/current?stationId={StationID}&format=json&units={StationUnits}&apiKey={WebServiceApiKey}'
 
-headers = Object()
-headers.user-agent = 'RaspberryPiPython/0.0.1'
-headers.Accept-Encoding = 'gzip'
-headers.key = WebServiceApiKey
+headers = {'accept-encoding': 'gzip'}
 
 data = Object()
 data.observations = Object()
@@ -62,7 +59,7 @@ data.observations.temp = 24
 print(data.toJSON())
 
 # Publish your weather station observations to the weather underground.
-response = requests.post(WeatherURL, headers=headers.toJSON(), json=data.toJSON())
+response = requests.post(WeatherURL, headers=headers, json=data.toJSON())
 
 if response.status_code != 200:
     print(f'POST {WeatherURL} {response.status_code}')  
