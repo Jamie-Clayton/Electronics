@@ -1,15 +1,27 @@
 # Overview
 
-This is combination project, using multiple sensors including.
+https://bit.ly/33rlhK6
 
-* LED
+This is combination project, using multiple sensors including. We have included links and code from other garage projects, to help you customise the project.
+
+* rgb LED
 * Buzzer
 * Ultra Sonic Distance Sensor (2 - 400 cm)
 * Raspberry Pi
 * Python programming language
 * Breadboard
 
-## Adeept Sensor Ultra Sonic Distance Sensor code
+## Python Knowledge
+> \#! 
+>
+> Shebang
+>
+> The first line in this file is the "shebang" line.  When you execute a file from the shell, the shell tries to run the file using the command specified on the shebang line.
+
+## Ultra Sonic Distance Sensor
+
+[Source Code](https://github.com/adeept/Adeept_Ultimate_Starter_Kit_Python_Code_for_RPi/blob/master/14_distance.py)
+[Instruction](../Ultimate_Sensor_Kit_RPi_Guidebook_Last.pdf)
 
 ### Configuration
 
@@ -19,6 +31,8 @@ This is combination project, using multiple sensors including.
 | 6   | Ground | Ultrasonic Distance Sensor | GND  | Ground       | 4          |
 | 16  | GPIO23 | Ultrasonic Distance Sensor | Trig | Input        | 2          |
 | 18  | GPIO24 | Ultrasonic Distance Sensor | Echo | Output       | 3          |
+
+![Layout](../assets/raspberry_pi_Raspberry-Pi-GPIO-Layout-Model-B-Plus.png =200x655)
 
 ```python
 #! /usr/bin/python
@@ -54,9 +68,11 @@ except KeyboardInterrupt:
 	GPIO.cleanup()
 ```
 
-## Parking Sensor Alarm Code
+## Parking Sensor Alarm
 
-https://www.hackster.io/342470/parking-sensor-alarm-ddd8d5
+The sensor code has been adapted to work with 3 leds and a buzzer.
+
+[Instructions](https://www.hackster.io/342470/parking-sensor-alarm-ddd8d5)
 
 ```python
 #import the libraries used
@@ -174,4 +190,77 @@ pi.write(buzzer, 0)
 pi.stop()
 #clean all the used ports
 GPIO.cleanup()
+```
+
+## RGB LED
+
+[Source Code](https://github.com/adeept/Adeept_Ultimate_Starter_Kit_Python_Code_for_RPi/blob/master/08_rgbLed.py)
+
+```python
+#!/usr/bin/env python
+import RPi.GPIO as GPIO
+import time
+
+colors = [0xFF0000, 0x00FF00, 0x0000FF, 0xFFFF00, 0xFF00FF, 0x00FFFF, 0X6F00D2, 0xFF5809]
+
+R = 11
+G = 12
+B = 13
+
+def setup(Rpin, Gpin, Bpin):
+	global pins
+	global p_R, p_G, p_B
+	pins = {'pin_R': Rpin, 'pin_G': Gpin, 'pin_B': Bpin}
+	GPIO.setmode(GPIO.BOARD)       # Numbers GPIOs by physical location
+	for i in pins:
+		GPIO.setup(pins[i], GPIO.OUT)   # Set pins' mode is output
+		GPIO.output(pins[i], GPIO.HIGH) # Set pins to high(+3.3V) to off led
+	
+	p_R = GPIO.PWM(pins['pin_R'], 2000)  # set Frequece to 2KHz
+	p_G = GPIO.PWM(pins['pin_G'], 1999)
+	p_B = GPIO.PWM(pins['pin_B'], 5000)
+	
+	p_R.start(100)      # Initial duty Cycle = 100(leds off)
+	p_G.start(100)
+	p_B.start(100)
+
+def map(x, in_min, in_max, out_min, out_max):
+	return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
+
+def off():
+	for i in pins:
+		GPIO.output(pins[i], GPIO.HIGH)    # Turn off all leds
+
+def setColor(col):   # For example : col = 0x112233
+	R_val = (col & 0xff0000) >> 16
+	G_val = (col & 0x00ff00) >> 8
+	B_val = (col & 0x0000ff) >> 0
+
+	R_val = map(R_val, 0, 255, 0, 100)
+	G_val = map(G_val, 0, 255, 0, 100)
+	B_val = map(B_val, 0, 255, 0, 100)
+	
+	p_R.ChangeDutyCycle(100-R_val)     # Change duty cycle
+	p_G.ChangeDutyCycle(100-G_val)
+	p_B.ChangeDutyCycle(100-B_val)
+
+def loop():
+	while True:
+		for col in colors:
+			setColor(col)
+			time.sleep(0.5)
+
+def destroy():
+	p_R.stop()
+	p_G.stop()
+	p_B.stop()
+	off()
+	GPIO.cleanup()
+
+if __name__ == "__main__":
+	try:
+		setup(R, G, B)
+		loop()
+	except KeyboardInterrupt:
+		destroy()
 ```
