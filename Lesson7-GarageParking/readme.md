@@ -9,7 +9,9 @@ This is combination project, using multiple sensors including.
 * Python programming language
 * Breadboard
 
-## Configuration
+## Adeept Sensor Ultra Sonic Distance Sensor code
+
+### Configuration
 
 | Pin | Layout | Sensor Name                | Name | Action       | Sensor Pin |
 | --- | ------ | -------------------------- | ---- | ------------ | ---------- |
@@ -17,8 +19,6 @@ This is combination project, using multiple sensors including.
 | 6   | Ground | Ultrasonic Distance Sensor | GND  | Ground       | 4          |
 | 16  | GPIO23 | Ultrasonic Distance Sensor | Trig | Input        | 2          |
 | 18  | GPIO24 | Ultrasonic Distance Sensor | Echo | Output       | 3          |
-
-## Adeept Sensor Ultra Sonic Distance Sensor code
 
 ```python
 #! /usr/bin/python
