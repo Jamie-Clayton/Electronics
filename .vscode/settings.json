@@ -1,5 +1,22 @@
 {
     "cSpell.words": [
         "Adeept"
-    ]
+    ],
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#da875c",
+        "activityBar.activeBorder": "#b1edc6",
+        "activityBar.background": "#da875c",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#b1edc6",
+        "activityBarBadge.foreground": "#15202b",
+        "statusBar.background": "#d06833",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#a95327",
+        "titleBar.activeBackground": "#d06833",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#d0683399",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#D06833"
 }
