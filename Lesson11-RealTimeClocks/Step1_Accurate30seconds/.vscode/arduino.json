@@ -1,0 +1,7 @@
+{
+    "board": "arduino:avr:nano",
+    "programmer": "arduino:cmsis-dap",
+    "port": "COM5",
+    "sketch": "Step1_Accurate30seconds.ino",
+    "configuration": "cpu=atmega328old"
+}
