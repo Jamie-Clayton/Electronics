@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+message Location {
+    string name = 1; // The individual sensor name.
+    string description = 2; 
+    enum encodingType = 3; // Recommend defaulting to 'application/vnd.geo+json'.
+    string location = 4; // Based on the encoding type, use GeoJSON in this field.
+}

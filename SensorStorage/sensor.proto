@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+message Sensor {
+    string name = 1; // The individual sensor name.
+    string description = 2; 
+    enum encodingType = 3;
+    any metadata = 4;
+}

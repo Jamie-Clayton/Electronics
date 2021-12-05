@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+message Thing {
+    string name = 1; // A thing is an object of the physical world.
+    string description = 2; // Describes what the thing is, like a raspberry pi devices configured to do something.
+    map<K,V> properties = 3; // Key value pairs expressed in json syntax structure.
+}

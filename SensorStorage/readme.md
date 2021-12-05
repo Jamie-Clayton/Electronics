@@ -4,6 +4,7 @@ It will be important to collect and store sensor data. There are open source sen
 
 ![Sensor Entities - Copyright © 2016 Open Geospatial Consortium](../assets/SensorEntities.png)
 
+
 ## References
 
 Copyright © 2016 Open Geospatial Consortium
@@ -11,3 +12,7 @@ Copyright © 2016 Open Geospatial Consortium
 [Open Sensor Entities](../assets/15-078r6_OGC_SensorThings_API_Part_1_Sensing.pdf)
 
 [OGC SensorThings API](https://github.com/opengeospatial/sensorthings)
+
+[Partical IO - APIs for IOT devices](https://iotdesignpro.com/projects/iot-controlled-led-using-particle-io-and-raspberry-pi)
+
+[Partical IO - API guide](https://docs.particle.io/reference/device-cloud/api/)
