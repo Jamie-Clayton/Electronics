@@ -33,28 +33,31 @@ void loop() {
   tmElements_t tm;  
   myRTC.read(tm);
   unsigned long currentMillis = millis();
-  
-//  Serial.print("Real Time: ");
-//  Serial.print(tm.Minute);
-//  Serial.print(":");
-//  Serial.print(tm.Second);
-//  Serial.print(" ");
-//  Serial.print(currentMillis); 
-//  Serial.println("ms"); 
+  unsigned long relayStartedAt;
   
   // Record the top and bottom of a second hand passing the 0/360 degree and 180 degree of the rotation through the circle.
-  if(tm.Second == 30 || tm.Second == 0){   
+  if(tm.Second == 30 || tm.Second == 0){    
     if (!sentSignal){
+      Serial.print("Real Time: ");
+      Serial.print(tm.Minute);
+      Serial.print(":");
+      Serial.print(tm.Second);
+      Serial.print(" ");
+      Serial.print(currentMillis); 
+      Serial.println("ms");
+      
       SetRelay(relay1,HIGH);
+      relayStartedAt = currentMillis;
       sentSignal = true;
       
       //   Delay is bad and using the ardunio board time not the RTC.
-      delay(relayOnTimeInMilliseconds);
+      //delay(relayOnTimeInMilliseconds);
     }
     
     // Logic to switch the Relay pulse off as long as the relayOnTimeInMilliseconds has also been exceeded
-    if (sentSignal && digitalRead(relay1)== HIGH){             
+    if (sentSignal && digitalRead(relay1)== HIGH && relayStartedAt > 0 && (relayStartedAt + relayOnTimeInMilliseconds >= currentMillis)){             
       SetRelay(relay1,LOW);
+      relayStartedAt = 0;
     }      
   }
   
