@@ -12,15 +12,13 @@ Point, Evidence, Explain, Link
   * Soldering
 * Choosing a software library
 
->[PWM](https://www.arduino.cc/en/Tutorial/Foundations/PWM)  can also effect the sound of your motors. It's more efficient to use PWM compared to, say, a resistor in series, as a lot power is dissipated through the resistor. It's also much easier to output a PWM pulse and is typically built into microcontroller's hardware nowadays [J Marple, 2015](https://robotics.stackexchange.com/a/7779)
+>[PWM](https://www.arduino.cc/en/Tutorial/Foundations/PWM)  can also effect the sound of your motors. It's more efficient to use PWM compared to, say, a resistor in series, as a lot power is dissipated through the resistor. It's also much easier to output a PWM pulse and is typically built into microcontroller's hardware nowadays. [Marple, J. (2015, July 31). Electric Motor Speed Control - PWM vs analog voltage? Robotics Stack Exchange.](https://robotics.stackexchange.com/questions/7778/electric-motor-speed-control-pwm-vs-analog-voltage/7779#7779)
 
 ## References
 
 [Elliott, R. (2021, February 1). Driving Slave Clocks With Arduino. Elliot Sound Products.](https://sound-au.com/clocks/arduino.html)
 
 [Christensen, J. (2020, September 7). Arduino Library for Maxim Integrated DS3232 and DS3231 Real-Time Clocks. GitHub.](https://github.com/JChristensen/DS3232RTC)
-
-[Real Time Clock Technical Specification](https://datasheets.maximintegrated.com/en/ds/DS3231-DS3231S.pdf)
 
 [Servo, T. (2017, June 20). How to get millisecond resolution from DS3231 RTC. Stack Overflow.](https://stackoverflow.com/questions/44644383/how-to-get-millisecond-resolution-from-ds3231-rtc)
 
@@ -41,3 +39,7 @@ Point, Evidence, Explain, Link
 [Ardunio AG. (n.d.). delay() - Arduino Reference. Ardunio.](https://www.arduino.cc/reference/en/language/functions/time/delay/)
 
 [Ardunio AG. (2018, February 5). Blink without delay. Arduino.](https://www.arduino.cc/en/Tutorial/BuiltInExamples/BlinkWithoutDelay)
+
+## Downloads
+
+[Real Time Clock Technical Specification](https://datasheets.maximintegrated.com/en/ds/DS3231-DS3231S.pdf)
