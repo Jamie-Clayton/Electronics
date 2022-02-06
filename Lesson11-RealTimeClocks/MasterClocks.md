@@ -12,6 +12,94 @@ Point, Evidence, Explain, Link
   * Soldering
 * Choosing a software library
 
+## Master Clock Source Code
+```c++
+#include <DS3232RTC.h> // Real time clock library with most code examples
+#include <stdio.h> // C++ library function sprintf
+#include <limits.h> // Constants for variable sizes
+DS3232RTC rtc(false);
+
+const int relay1 = 7;
+const int relayOnInMilliseconds = 100;
+
+char seconds[2];
+volatile bool sentSignal;
+volatile bool relayOpen;
+volatile unsigned long currentMillis;
+volatile unsigned long relayStopAfterMillis;
+
+void setup() {
+  // Let this run for 1 hour to confirm there are 120 executions and the relay timing reports at approximately 100ms 
+  Serial.begin(9600); // open the serial port at 9600
+  rtc.begin();
+  //  Setting the RTC clock is required if the power drops off.
+  setTime(12, 45, 00, 06, 02, 2022);
+  rtc.set(now());
+  sentSignal = false;
+  
+  //  Setup the ardunio board pin for the relay.
+  pinMode(relay1, OUTPUT);
+}
+
+void loop() {
+  tmElements_t tm;  
+  rtc.read(tm);
+  if(tm.Second == 30 || tm.Second == 0){
+    if (!sentSignal){     
+      sprintf(seconds, "%02d", tm.Second);
+      Serial.print("Reporting in ");        
+      Serial.print(seconds);
+      Serial.println(".");
+      sentSignal = true;
+      SetRelay(relay1,HIGH);
+      relayStopAfterMillis = CalculateStopMillis(millis());      
+      relayOpen = true;
+    }
+    
+    // Monitor if relay has exceeded the time and can be closed.
+    if (millis() >= relayStopAfterMillis && relayOpen)
+    {
+      //  Relay can close the circuit.
+      SetRelay(relay1,LOW);
+      relayOpen = false;
+    }
+    
+  }
+  if(tm.Second != 30 && tm.Second != 0){
+    if (sentSignal){       
+      //  Reset the signal after once out time moves to the next second.
+      sentSignal = false; 
+    }
+  }
+}
+
+//  ASSUMPTION: We have the hardware reaching the maximum value
+unsigned long CalculateStopMillis(unsigned long relayStartedAtMillis){    
+  //   Calculated the millis value that should close the relay.
+  if ((ULONG_MAX - relayOnInMilliseconds) > relayStartedAtMillis){
+    //  Happy Path: millis will always be higher on the next call
+    return relayStartedAtMillis + relayOnInMilliseconds;
+  }else {
+    //  Unlikely Path: millis is going to rollover back to zero.
+    return relayOnInMilliseconds - (ULONG_MAX - relayStartedAtMillis);
+  }        
+}
+
+void SetRelay(int relayControlPin, uint8_t highOrLow){
+  if (highOrLow == HIGH || highOrLow == LOW){
+    Serial.print("Relay on pin ");
+    Serial.print(relayControlPin);
+    if (highOrLow == HIGH){ 
+      Serial.println(" on");
+    }
+    if (highOrLow == LOW){          
+      Serial.println(" off");
+    }
+    digitalWrite(relayControlPin, highOrLow);  
+  }  
+}
+```
+
 >[PWM](https://www.arduino.cc/en/Tutorial/Foundations/PWM)  can also effect the sound of your motors. It's more efficient to use PWM compared to, say, a resistor in series, as a lot power is dissipated through the resistor. It's also much easier to output a PWM pulse and is typically built into microcontroller's hardware nowadays. [Marple, J. (2015, July 31). Electric Motor Speed Control - PWM vs analog voltage? Robotics Stack Exchange.](https://robotics.stackexchange.com/questions/7778/electric-motor-speed-control-pwm-vs-analog-voltage/7779#7779)
 
 Resolving communications problems with the Ardunio Nano hardware was uncovered via the IDE verbose settings and search for explicit errors, uncovering the need for ATmega328P(Old bootloader) settings.
