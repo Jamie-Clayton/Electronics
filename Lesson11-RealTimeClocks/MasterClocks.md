@@ -1,18 +1,9 @@
 # Introduction
 
-Point, Evidence, Explain, Link
-
-* Gotchas
-  * Millisecond accurate time is hard.
-  * Cables (Power vs Power & Data)
-  * Microcontroller - registers and interrupts
-  * Working with small electronics
-* IDE Configuration for new users
-* Evolving from a breadboard
-  * Soldering
-* Choosing a software library
-
 ## Master Clock Source Code
+
+Experimenting with different features of the Arduino hardware resulted in the following code, which enables a relay to be toggled on and off for 100 milliseconds.
+
 ```c++
 #include <DS3232RTC.h> // Real time clock library with most code examples
 #include <stdio.h> // C++ library function sprintf
