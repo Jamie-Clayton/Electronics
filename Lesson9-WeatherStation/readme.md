@@ -132,3 +132,4 @@ Exit python prompt
 [Changing to Python 3 on Raspberry Pi](https://linuxconfig.org/how-to-change-from-default-to-alternative-python-version-on-debian-linux)
 [How to install Python requests code](https://stackoverflow.com/questions/23283045/importerror-no-module-named-requests-python-3-4-0/23283081)
 [Pip warning - 9859](https://github.com/pypa/pip/issues/9859)
+[Running programs on startup](https://www.dexterindustries.com/howto/run-a-program-on-your-raspberry-pi-at-startup/)
