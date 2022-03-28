@@ -133,3 +133,4 @@ Exit python prompt
 [How to install Python requests code](https://stackoverflow.com/questions/23283045/importerror-no-module-named-requests-python-3-4-0/23283081)
 [Pip warning - 9859](https://github.com/pypa/pip/issues/9859)
 [Running programs on startup](https://www.dexterindustries.com/howto/run-a-program-on-your-raspberry-pi-at-startup/)
+[Wiring Diagrams BME280](https://learn.adafruit.com/adafruit-bme280-humidity-barometric-pressure-temperature-sensor-breakout/python-circuitpython-test)
